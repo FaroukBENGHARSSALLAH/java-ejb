@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+			<groupId>com.farouk.bengharssallah.java.ejb</groupId>
+	        <artifactId>java-ejb</artifactId>
+			<version>${project-global-version}</version>
+   </parent>
+   <groupId>com.farouk.bengharssallah.java.ejb.v3</groupId>
+   <artifactId>java-ejb-v3</artifactId>
+   <packaging>ejb</packaging>
+   
+    <name>Java EJB v3 APIs</name>
+	<description>A quick introduction to EJB in v3</description>
+	  
+	  <developers>
+		<developer>
+		  <name>Farouk BEN GHARSSALLAH</name>
+		  <email>farouk.bengarssallah@gmail.com</email>
+		</developer>
+	  </developers>
+	  
+   <dependencies>
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
+			<version>3.0</version>
+		</dependency>
+   </dependencies>
+  
+   <build>
+        <sourceDirectory>src</sourceDirectory>
+    
+	    <resources>
+	      <resource>
+	        <directory>src</directory>
+	        <excludes>
+	          <exclude>**/*.java</exclude>
+	        </excludes>
+	      </resource>
+	    </resources>
+    
+	    <plugins>
+	    
+		      <plugin>
+		        <artifactId>maven-compiler-plugin</artifactId>
+		        <version>${maven-compiler-plugin-version}</version>
+		        <configuration>
+		             <source>${java-jdk-version}</source>
+		             <target>${java-jdk-version}</target>
+		        </configuration>
+		      </plugin>
+	      
+		      <plugin>
+		        <artifactId>maven-ejb-plugin</artifactId>
+		        <version>${maven-ejb-plugin-version}</version>
+		        <configuration>
+		          <ejbVersion>3.0</ejbVersion>
+		        </configuration>
+		      </plugin>
+	      
+	    </plugins>
+  </build>
+  
+</project>

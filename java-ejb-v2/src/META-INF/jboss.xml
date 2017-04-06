@@ -1,0 +1,27 @@
+
+<!-- It's required to define this file containing deployment descriptor for an EJBv2 bean for JBoss server -->
+<!-- For an example, you should define the 'sun-cmp-mappings.xml' in a GlassFish server -->
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jboss PUBLIC "-//JBoss//DTD JBOSS 3.2//EN" "http://www.jboss.org/j2ee/dtd/jboss_3_2.dtd">
+
+<jboss>
+
+   <enterprise-beans>
+
+      <session>
+         <ejb-name>EJBv2Bean</ejb-name>
+         <!-- remote JNDI value -->
+         <jndi-name>ejb/com/farouk/bengharssallah/java/ejb/v2/withoutxdoclet/bean/EJBv2Bean</jndi-name>
+         <!-- local JNDI value -->
+         <local-jndi-name>ejb/EJBv2Bean</local-jndi-name>
+         <method-attributes></method-attributes>
+      </session>
+
+   </enterprise-beans>
+
+   <resource-managers>
+   </resource-managers>
+
+</jboss>

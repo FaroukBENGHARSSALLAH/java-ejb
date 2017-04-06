@@ -1,0 +1,38 @@
+
+<!-- It's required to define this file containing EJBv2 's metadata -->
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" 
+                         "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+<ejb-jar id="java-ejb-v2">
+
+	<display-name>java-ejb-v2</display-name>
+	
+	 <enterprise-beans>
+	      <session>
+	         <description> An EJB v2 Session Bean</description>
+	        
+	         <ejb-name>EJBv2Bean</ejb-name>
+	         
+	         <!-- local interface to access to the business logic -->
+	         <local>com.farouk.bengharssallah.java.ejb.v2.bean.object.EJBv2RemoteObject.EJBv2LocalObject</local>
+	         
+	         <!-- local interface to instantiate the bean -->
+	         <local-home>com.farouk.bengharssallah.java.ejb.bean.home.EJBv2LocalHome</local-home>
+	         
+	         <!-- remote interface to access to the business logic -->
+	         <remote>com.farouk.bengharssallah.java.ejb.v2.bean.object.EJBv2RemoteObject</remote>
+	         
+	         <!-- remote interface to instantiate the bean -->
+	         <home>com.farouk.bengharssallah.java.ejb.v2.bean.home.EJBv2RemoteHome</home>
+	         
+	         <!-- bean life cycle and required method and business logic implementation-->
+	         <ejb-class>com.farouk.bengharssallah.java.ejb.v2.bean</ejb-class>
+	         
+	         <session-type>Stateless</session-type>
+	         
+	      </session>
+	      
+   </enterprise-beans>
+</ejb-jar>
