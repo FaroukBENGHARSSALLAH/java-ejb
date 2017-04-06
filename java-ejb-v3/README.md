@@ -10,4 +10,4 @@ In 'EJB3' you have to code your EJB's description using only annotations, more s
 
 - 'EJBv3BeanImplementation' in 'com.farouk.bengharssallah.java.ejb.v3.bean.implementation' to implement the bean 's body
 
-You don't need XML files decriptors, the annotations will handle that
+You don't need XML files decriptors, the annotations will handle that.
